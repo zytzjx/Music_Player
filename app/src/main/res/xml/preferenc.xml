@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >  
+    <PreferenceCategory android:title="@string/sounds">
+        <ListPreference  
+            android:key="list_key"  
+            android:defaultValue="@string/onespeed"
+            android:title="@string/setspeed"
+            android:summary="@string/speed"
+            android:entries="@array/list_preference"  
+            android:entryValues="@array/list_preference"  
+            android:dialogTitle="@string/setspeed" />
+    </PreferenceCategory>  
+    <PreferenceCategory android:title="Play style">
+        <!--EditTextPreference
+            android:key="edittext_key"  
+            android:defaultValue="edit default value"  
+            android:summary="edit summary"  
+            android:title="edit title" /-->
+        <CheckBoxPreference  
+            android:key="checkbox_key"  
+            android:defaultValue="Loop play"
+            android:summary="Loop or next"
+            android:title="Single "
+            />                
+        <!--EditTextPreference
+            android:key="num_key"  
+            android:defaultValue="0"  
+            android:summary="edit summary"  
+            android:numeric="integer"  
+            android:title="input number" /-->
+     </PreferenceCategory>
+ </PreferenceScreen>  

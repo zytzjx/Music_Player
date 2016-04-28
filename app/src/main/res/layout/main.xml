@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout android:id="@+id/ll_list"
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		>
+	   
+	  <ScrollView
+		  android:id="@+id/scrollview"
+		  android:fillViewport="true"
+		  android:layout_width="fill_parent"
+		  android:layout_height="wrap_content"
+		  android:scrollbars="vertical"
+		  android:background="@android:color/black"
+		  android:layout_weight="3"
+		  android:filterTouchesWhenObscured="false"
+		  android:minHeight="540dp">
+	 <RelativeLayout
+   	   xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content">
+
+		<com.Aina.Android.ViewlrcKLOK
+			android:id="@+id/lrc_view"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentRight="true"
+			android:layout_alignParentBottom="true" />
+
+        <TextView
+			android:id="@+id/lrc"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@+id/hello"
+			android:layout_below="@+id/lrc_view" />
+         
+        </RelativeLayout>
+	  </ScrollView>
+
+		<ListView android:id="@+id/lv_music"
+		          android:layout_width="match_parent"
+			      android:layout_height="wrap_content"
+			android:layout_weight="1">
+	   </ListView>
+	   
+	</LinearLayout>
+
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_weight="5">
+
+		<LinearLayout android:id="@+id/ll_btn"
+            android:orientation="horizontal" android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageButton android:id="@+id/imgbtn_last" android:src="@drawable/last"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageButton>
+            <ImageButton android:id="@+id/imgbtn_start" android:src="@drawable/start"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageButton>
+            <ImageButton android:id="@+id/imgbtn_pause" android:src="@drawable/pause"
+                android:visibility="gone" android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></ImageButton>
+            <ImageButton android:id="@+id/imgbtn_stop" android:src="@drawable/stop"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageButton>
+            <ImageButton android:id="@+id/imgbtn_next" android:src="@drawable/next"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageButton>
+        <TextView android:id="@+id/mTextView" android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:text=""></TextView>
+
+        </LinearLayout>
+
+		<SeekBar
+			android:id="@+id/SeekBar01"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+			android:layout_alignParentBottom="true"
+			android:layout_alignParentLeft="true">
+    	</SeekBar>
+	</RelativeLayout>
+
+</LinearLayout>
